@@ -1,0 +1,26 @@
+.action-node {
+    border: 1px solid #777;
+    border-radius: 5px;
+    padding: 10px;
+    background: #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+.action-node .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.action-node .icons {
+    display: flex;
+    gap: 5px;
+}
+
+.action-node .icons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
