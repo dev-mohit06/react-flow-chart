@@ -195,6 +195,7 @@ const App = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    toast.success('JSON exported successfully');
   }, [nodes, edges]);
 
   const importFromJson = useCallback((jsonString) => {
@@ -212,8 +213,9 @@ const App = () => {
         }));
         setNodes((nds) => [...nds, ...newNodes]);
         setEdges((eds) => [...eds, ...newEdges]);
+        toast.success('JSON Imported successfully');
       } else {
-        console.error('Invalid JSON structure');
+        toast.error('Invalid JSON structure');
       }
     } catch (error) {
       console.error('Failed to parse JSON', error);
